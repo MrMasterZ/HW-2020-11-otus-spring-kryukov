@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="readerStrategy" class="otus.student.kryukov.dz.dao.ReaderStrategyQuestion"></bean>
+
+    <bean id="questionWriter" class="otus.student.kryukov.dz.dao.QuestionWriterImpl"></bean>
+
+    <bean id="csvStrategyReader" class="otus.student.kryukov.dz.dao.CSVStrategyReaderImpl">
+        <constructor-arg name="csvFileName" value="/spring-test.csv"/>
+        <constructor-arg name="strategy" ref="readerStrategy"/>
+    </bean>
+
+</beans>
