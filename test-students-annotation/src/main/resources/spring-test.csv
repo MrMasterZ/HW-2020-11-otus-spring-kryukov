@@ -1,0 +1,5 @@
+What annotation must a class have in order for it to be found by @ComponentScan and added in context of Spring? (check all correct answers),@Registry,0,@Service,1,@Repository,1,@Configuration,0,@Controller,1
+What annotation can be used to injection dependency (DI)? (check all correct answers),@Inject,1,@Joined,0,@Autowired,1,@Resource,1
+What is a BeanDefinition?,interface for accessing future bean metadata,1,class for accessing future bean metadata,0,interface for creating bean,0
+What are the life cycle statuses of Entity object in Hibernate? (check all correct answers),transient,1,managed,0,persistent,1,detached,1,removed,1
+What are the types of collections in Hibernate? (continue this list: Set Map List),Bag,1,Slot,0,Array,1,Queue,0
