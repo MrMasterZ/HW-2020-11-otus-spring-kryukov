@@ -18,7 +18,7 @@ public class CSVStrategyReaderImplTest {
 
     private ReaderStrategyQuestion strategy;
     private CSVStrategyReader csvStrategyReader;
-    private String csvFile = "/spring-test-for-test.csv";
+    private String csvFile = "/spring-test.csv";
 
     @BeforeEach
     void setUp() {
