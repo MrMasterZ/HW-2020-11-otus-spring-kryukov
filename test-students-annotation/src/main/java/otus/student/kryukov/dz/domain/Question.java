@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Question implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class Question {
 
     private String question;
     private String answer1;

@@ -4,25 +4,32 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.junit.jupiter.api.Assertions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import otus.student.kryukov.dz.Main;
 import otus.student.kryukov.dz.domain.Question;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @DisplayName("Класс CSVStrategyReaderImpl")
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = Main.class)
 public class CSVStrategyReaderImplTest {
 
     private ReaderStrategyQuestion strategy;
     private CSVStrategyReader csvStrategyReader;
-    private String csvFile = "/spring-test.csv";
+    private final String csvFile = "/spring-test.csv";
+
+    @Autowired
+    public CSVStrategyReaderImplTest(ReaderStrategyQuestion strategy) {
+        this.strategy = strategy;
+    }
 
     @BeforeEach
     void setUp() {
-        strategy = Mockito.spy(ReaderStrategyQuestion.class);
         csvStrategyReader = new CSVStrategyReaderImpl(csvFile, strategy);
     }
 

@@ -7,14 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import otus.student.kryukov.dz.Main;
 import otus.student.kryukov.dz.domain.Question;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @DisplayName("Класс QuestionChecker")
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = Main.class)
 public class QuestionCheckerTest {
-    private static Checker checker;
+    private final Checker checker;
 
     @Autowired
     public QuestionCheckerTest(Checker checker) {

@@ -9,22 +9,22 @@ import java.util.Scanner;
 
 @Service
 public class ConsoleIOService implements IOService {
-    private final PrintStream OUT;
-    private final Scanner SCANNER;
+    private final PrintStream out;
+    private final Scanner scanner;
 
     public ConsoleIOService(@Value("#{T(java.lang.System).out}") PrintStream out,
                             @Value("#{T(java.lang.System).in}") InputStream in) {
-        this.OUT = out;
-        this.SCANNER = new Scanner(in);
+        this.out = out;
+        this.scanner = new Scanner(in);
     }
 
     @Override
     public void out(String message) {
-        OUT.println(message);
+        out.println(message);
     }
 
     @Override
     public String readString() {
-        return SCANNER.nextLine();
+        return scanner.nextLine();
     }
 }

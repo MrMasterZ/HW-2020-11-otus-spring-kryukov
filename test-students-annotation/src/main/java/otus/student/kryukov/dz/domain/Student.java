@@ -7,8 +7,7 @@ import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
-public class Student implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class Student {
 
     private String name;
     private String surname;

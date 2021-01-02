@@ -4,7 +4,6 @@ import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.bean.CsvToBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
@@ -16,12 +15,11 @@ import java.util.List;
 @PropertySource("classpath:application.properties")
 @Service
 public class CSVStrategyReaderImpl implements CSVStrategyReader {
-    private InputStream inputFile;
-    private ReaderStrategy strategy;
+    private final InputStream inputFile;
+    private final ReaderStrategy strategy;
     private static final Logger LOGGER = LoggerFactory.getLogger(CSVStrategyReaderImpl.class);
 
-   @Autowired
-   public CSVStrategyReaderImpl(@Value("${csv.file.name}") String csvFileName, ReaderStrategy strategy) {
+    public CSVStrategyReaderImpl(@Value("${csv.file.name}") String csvFileName, ReaderStrategy strategy) {
         this.inputFile = CSVStrategyReaderImpl.class.getResourceAsStream(csvFileName);
         this.strategy = strategy;
     }

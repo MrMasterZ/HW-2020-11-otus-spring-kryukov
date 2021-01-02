@@ -14,7 +14,8 @@ public class QuestionChecker implements Checker {
     public byte check(Question question, String answer) {
         LOGGER.info("QuestionChecker.check()");
         byte mark;
-        if (parseQuestionCount(question) == parseAnswerCount(answer)) mark = 1; else mark = 0;
+        if (parseQuestionCount(question) == parseAnswerCount(answer)) mark = 1;
+        else mark = 0;
         return mark;
     }
 

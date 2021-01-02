@@ -1,6 +1,5 @@
 package otus.student.kryukov.dz.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import otus.student.kryukov.dz.domain.Question;
 
@@ -10,18 +9,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import otus.student.kryukov.dz.io.IOService;
 
-
 @Service
 public class QuestionWriterImpl implements QuestionWriter {
     private static final Logger LOGGER = LoggerFactory.getLogger(QuestionWriterImpl.class);
-    private static IOService ioService;
+    private final IOService ioService;
 
-    @Autowired
     public QuestionWriterImpl(IOService ioService) {
         this.ioService = ioService;
     }
 
-    public final void writeQuestion(Question question) {
+    @Override
+    public void writeQuestion(Question question) {
         LOGGER.info("QuestionWriterImpl.writeQuestion(Question question)");
         int n = 0;
         try {
