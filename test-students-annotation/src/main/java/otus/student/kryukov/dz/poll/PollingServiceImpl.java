@@ -33,8 +33,8 @@ public class PollingServiceImpl implements PollingService {
     @Override
     public void poll() {
         Student student = authService.auth();
-        byte mark = 0;
-        byte nQuestion = 0;
+        int mark = 0;
+        int nQuestion = 0;
         for (Object object : reader.read()) {
             Question question = (Question) object;
             writer.writeQuestion(question);
@@ -42,7 +42,7 @@ public class PollingServiceImpl implements PollingService {
             mark += checker.check(question, answer);
             nQuestion++;
         }
-        if (mark >= Byte.parseByte(passScore))
+        if (mark >= Integer.parseInt(passScore))
             ioService.out(student.getName() + " " + student.getSurname() + " passed the test successfully (" + mark + " correct answer out of " + nQuestion + ")");
         else
             ioService.out(student.getName() + " " + student.getSurname() + " did not pass the test (" + mark + " correct answer out of " + nQuestion + ")");

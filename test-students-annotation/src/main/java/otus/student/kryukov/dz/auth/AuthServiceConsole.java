@@ -8,7 +8,7 @@ import otus.student.kryukov.dz.io.IOService;
 
 @Service
 public class AuthServiceConsole implements AuthService {
-    private static IOService ioService;
+    private final IOService ioService;
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthServiceConsole.class);
 
     public AuthServiceConsole(IOService ioService) {
@@ -21,12 +21,12 @@ public class AuthServiceConsole implements AuthService {
         return new Student(enterName(), enterSurname());
     }
 
-    private synchronized static String enterName() {
+    private String enterName() {
         ioService.out("Enter your name:");
         return ioService.readString();
     }
 
-    private synchronized static String enterSurname() {
+    private String enterSurname() {
         ioService.out("Enter your surname:");
         return ioService.readString();
     }

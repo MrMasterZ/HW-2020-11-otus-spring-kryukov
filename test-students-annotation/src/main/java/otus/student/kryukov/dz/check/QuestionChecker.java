@@ -11,41 +11,41 @@ public class QuestionChecker implements Checker {
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthServiceConsole.class);
 
     @Override
-    public byte check(Question question, String answer) {
+    public int check(Question question, String answer) {
         LOGGER.info("QuestionChecker.check()");
-        byte mark;
+        int mark;
         if (parseQuestionCount(question) == parseAnswerCount(answer)) mark = 1;
         else mark = 0;
         return mark;
     }
 
-    private static final int parseQuestionCount(Question question) {
-        byte n1;
-        byte n2;
-        byte n3;
-        byte n4;
-        byte n5;
+    private int parseQuestionCount(Question question) {
+        int n1;
+        int n2;
+        int n3;
+        int n4;
+        int n5;
 
         if (question.getMark1() == null) n1 = 0;
-        else n1 = Byte.parseByte(question.getMark1());
+        else n1 = Integer.parseInt(question.getMark1());
         if (question.getMark2() == null) n2 = 0;
-        else n2 = Byte.parseByte(question.getMark2());
+        else n2 = Integer.parseInt(question.getMark2());
         if (question.getMark3() == null) n3 = 0;
-        else n3 = Byte.parseByte(question.getMark3());
+        else n3 = Integer.parseInt(question.getMark3());
         if (question.getMark4() == null) n4 = 0;
-        else n4 = Byte.parseByte(question.getMark4());
+        else n4 = Integer.parseInt(question.getMark4());
         if (question.getMark5() == null) n5 = 0;
-        else n5 = Byte.parseByte(question.getMark5());
+        else n5 = Integer.parseInt(question.getMark5());
 
         return count(n1, n2, n3, n4, n5);
     }
 
-    private static final int parseAnswerCount(String answer) {
-        byte n1;
-        byte n2;
-        byte n3;
-        byte n4;
-        byte n5;
+    private int parseAnswerCount(String answer) {
+        int n1;
+        int n2;
+        int n3;
+        int n4;
+        int n5;
 
         if (answer.contains("1")) n1 = 1;
         else n1 = 0;
@@ -61,7 +61,7 @@ public class QuestionChecker implements Checker {
         return count(n1, n2, n3, n4, n5);
     }
 
-    private static final int count(byte n1, byte n2, byte n3, byte n4, byte n5) {
+    private int count(int n1, int n2, int n3, int n4, int n5) {
         return n1 * 10000 + n2 * 1000 + n3 * 100 + n4 * 10 + n5;
     }
 }
