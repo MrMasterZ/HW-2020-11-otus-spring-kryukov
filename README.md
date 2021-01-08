@@ -2,3 +2,6 @@
 
 ### Домашнее задание №1 по теме "Введение в Spring Framework"
 * spring-in-xml-context
+
+### Домашнее задание №2 по теме "Конфигурирование Spring-приложений"
+* test-students-annotation
