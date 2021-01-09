@@ -5,3 +5,6 @@
 
 ### Домашнее задание №2 по теме "Конфигурирование Spring-приложений"
 * test-students-annotation
+
+### Домашнее задание №3 по теме "Чёрная магия Spring Boot"
+* test-students-spring-boot
