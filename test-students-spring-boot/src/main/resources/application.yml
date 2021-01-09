@@ -1,0 +1,8 @@
+application:
+  csvfilename_en: "/spring-test_en.csv"
+  csvfilename_ru: "/spring-test_ru.csv"
+  scorepass: 1
+  locale: ru_RU
+
+test:
+  csvfilename: "/spring-test_en.csv"
