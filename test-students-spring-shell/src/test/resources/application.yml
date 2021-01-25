@@ -1,0 +1,10 @@
+application:
+  csvfilename_en: "/spring-test_en.csv"
+  csvfilename_ru: "/spring-test_ru.csv"
+  scorepass: 1
+  locale: en_EN
+
+spring:
+  shell:
+    interactive:
+      enabled: false

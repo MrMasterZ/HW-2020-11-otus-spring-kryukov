@@ -8,3 +8,6 @@
 
 ### Домашнее задание №3 по теме "Чёрная магия Spring Boot"
 * test-students-spring-boot
+
+### Домашнее задание №4 по теме "Продвинутая конфигурация Spring-приложений"
+* test-students-spring-shell
