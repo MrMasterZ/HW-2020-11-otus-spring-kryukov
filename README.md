@@ -11,3 +11,6 @@
 
 ### Домашнее задание №4 по теме "Продвинутая конфигурация Spring-приложений"
 * test-students-spring-shell
+
+### Домашнее задание №5 по теме "DAO на Spring JDBC"
+* library-books-spring-jdbc-shell
