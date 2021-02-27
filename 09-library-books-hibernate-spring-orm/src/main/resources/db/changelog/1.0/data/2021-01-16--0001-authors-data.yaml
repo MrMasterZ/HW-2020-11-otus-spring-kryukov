@@ -1,0 +1,47 @@
+databaseChangeLog:
+- changeSet:
+    id: 2021-01-16--0001-authors-data
+    author: mrmasterz
+    changes:
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Isaac Asimov
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: James White
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Connie Willis
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Alexander Belov
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Evgeny Kukarkin
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Alexander Pushkin
+          tableName: authors
+      - insert:
+          columns:
+            - column:
+                name: author
+                value: Terentyev Mikhail
+          tableName: authors

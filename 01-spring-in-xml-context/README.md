@@ -1,19 +1,19 @@
-## Домашнее задание №1 (тема: Введение в Spring Framework) Крюкова Сергея Александровича по курсу otus "Разработчик на Spring Framework"
+## Homework №1 (theme: "Introduction to Spring Framework") Kryukov Sergey Alexandrovich on the course otus "Developer on Spring Framework"
 
-### Условие задания (описание функционала)
-* Приложение по проведению тестирования студентов (только вывод вопросов)
-* В ресурсах хранятся вопросы и различные ответы к ним в виде CSV файла (5 вопросов).
-* Вопросы могут быть с выбором из нескольких вариантов или со свободным ответом - на Ваше желание и усмотрение.
-* Приложение должно просто вывести вопросы теста из CSV-файла с возможными вариантами ответа.
+### Task
+* Create a part of the application for student testing (only output of questions and answer numbers to terminal) (continue in the following homework)
 
-### Требования к заданию
-* 1) В приложении должна присутствовать объектная модель (отдаём предпочтение объектам и классам, а не строчкам и массивам/спискам строчек).
-* 2) Все классы в приложении должны решать строго определённую задачу.
-* 3) Контекст описывается XML-файлом.
-* 4) Все зависимости должны быть настроены в IoC контейнере.
-* 5) Имя ресурса с вопросами (CSV-файла) необходимо захардкодить строчкой в XML-файле с контекстом.
-* 6) CSV с вопросами читается именно как ресурс, а не как файл.
-* 7) Scanner, PrintStream и другие стандартные типы в контекст класть не нужно!
-* 8) Весь ввод-вывод осуществляется на английском языке.
-* 9) Крайне желательно написать юнит-тест какого-нибудь сервиса.
-* 10) Приложение должно корректно запускаться с помощью "java -jar" 
+### Job Requirements
+* Questions and answer numbers are stored in a csv-file (5 questions)
+* Spring context must be on xml
+* I/O to console in English
+* Application must start correctly, using command "java -jar" 
+
+### Used technologies
+* XML-based configuration
+* Lombok
+* reflection
+* JUnit 5
+* Mockito
+* maven (maven-shade-plugin, etc)
+* opencsv

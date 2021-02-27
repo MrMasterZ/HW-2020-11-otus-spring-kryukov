@@ -1,0 +1,21 @@
+databaseChangeLog:
+- changeSet:
+    id: 2021-01-13--0001--authors
+    author: mrmasterz
+    createTable:
+      tableName: authors
+      columns:
+      - column:
+          name: author_id
+          type: bigint
+          autoIncrement: true
+          constraints:
+            nullable: false
+            primaryKey: true
+            primaryKeyName: pk_authors
+      - column:
+          name: author
+          type: varchar(255)
+          constraints:
+            nullable: false
+            unique: true

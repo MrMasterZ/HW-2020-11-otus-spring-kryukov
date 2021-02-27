@@ -1,11 +1,19 @@
-## Домашнее задание №2 (тема: Конфигурирование Spring-приложений) Крюкова Сергея Александровича по курсу otus "Разработчик на Spring Framework"
+## Homework №2 (theme: "Configuring Spring Applications") Kryukov Sergey Alexandrovich on the course otus "Developer on Spring Framework"
 
-### Условие задания (описание функционала)
-* Приложение по проведению тестирования студентов (с самим тестированием)
-* Программа должна спросить у пользователя фамилию и имя, спросить 5 вопросов из CSV-файла и вывести результат тестирования.
-* Выполняется на основе предыдущего домашнего задания (spring-in-xml-context) + , собственно, сам функционал тестирования.
+### Task
+* Create an application for student testing
+It is a continuation of 01-spring-in-xml-context
+(application gets user name and surname, then asks questions with answer options, gets answer numbers and calculates user's rating)
 
-### Требования к заданию
-* 1) Переписать конфигурацию в виде Java + Annotation-based конфигурации.
-* 2) Добавьте файл настроек для приложения тестирования студентов. В конфигурационный файл можно поместить путь до CSV-файла, количество правильных ответов для зачёта.
-* 3) Ввод-вывод на английском языке. 
+### Job Requirements
+* Take properties into application.properties
+* I/O to console in English
+
+### Used technologies
+* Java-based configuration
+* Annotation-based configuration
+* Lombok
+* reflection
+* JUnit 5
+* maven (maven-shade-plugin, etc)
+* opencsv
