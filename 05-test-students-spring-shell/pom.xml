@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>otus.student.kryukov.dz</groupId>
-	<artifactId>test-students-spring-shell</artifactId>
+	<artifactId>05-test-students-spring-shell</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>test-students-spring-shell</name>
+	<name>05-test-students-spring-shell</name>
 	<description>student testing application on spring boot with spring shell</description>
 
 	<properties>

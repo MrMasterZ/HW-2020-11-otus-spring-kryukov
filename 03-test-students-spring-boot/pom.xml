@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>otus.student.kryukov.dz</groupId>
-	<artifactId>test-students-spring-boot</artifactId>
+	<artifactId>03-test-students-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>test-students-spring-boot</name>
+	<name>03-test-students-spring-boot</name>
 	<description>student testing application on spring boot</description>
 
 	<properties>
