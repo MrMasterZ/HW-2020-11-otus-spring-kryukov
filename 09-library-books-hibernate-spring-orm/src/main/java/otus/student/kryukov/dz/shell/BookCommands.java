@@ -5,19 +5,23 @@ import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.exception.NoSuchEntityException;
+import otus.student.kryukov.dz.print.DrawTable;
 import otus.student.kryukov.dz.print.PrintService;
 import otus.student.kryukov.dz.service.BookService;
 
+import java.util.Arrays;
 import java.util.List;
 
 @ShellComponent
 public class BookCommands {
     private final BookService bookService;
     private final PrintService printService;
+    private final DrawTable drawTable;
 
-    public BookCommands(BookService bookService, PrintService printService) {
+    public BookCommands(BookService bookService, PrintService printService, DrawTable drawTable) {
         this.bookService = bookService;
         this.printService = printService;
+        this.drawTable = drawTable;
     }
 
     @ShellMethod(value = "create book-object in database", key = {"cb", "createBook"})
@@ -30,14 +34,14 @@ public class BookCommands {
     @ShellMethod(value = "get book-object by book_id", key = {"gbid", "getByBookId"})
     public void getByBookId(@ShellOption Long bookId) {
         Book bookObject = bookService.getByBookId(bookId);
-        bookService.drawAsciiTableBook(bookObject);
-        bookService.drawCommentsForBook(bookObject);
+        drawTable.drawAsciiTableBook(Arrays.asList(bookObject), Arrays.asList("book_id", "title", "author", "genre"));
+        drawTable.drawAsciiTableCommentsForBook(bookObject, Arrays.asList("comment_id", "comment"));
     }
 
     @ShellMethod(value = "get all book-objects", key = {"gab", "getAllBooks"})
     public void getAllBooks() {
         List<Book> books = bookService.getAllBooks();
-        bookService.drawAsciiTableBooks(books);
+        drawTable.drawAsciiTableBook(books, Arrays.asList("book_id", "title", "author", "genre"));
     }
 
     @ShellMethod(value = "update book-object in database", key = {"ub", "updateBook"})
@@ -57,6 +61,6 @@ public class BookCommands {
     public void getBookByAllParams(@ShellOption String title, @ShellOption String author, @ShellOption String genre) {
         Book bookObject = bookService.getByAllParams(title, author, genre)
                 .orElseThrow(() -> new NoSuchEntityException("no such book exists"));
-        bookService.drawAsciiTableBook(bookObject);
+        drawTable.drawAsciiTableBook(Arrays.asList(bookObject), Arrays.asList("book_id", "title", "author", "genre"));
     }
 }

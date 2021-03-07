@@ -20,10 +20,4 @@ public interface CommentService {
 
     Optional<Comment> getByCommentOrAllParams(String comment, Long bookId);
 
-    List<Comment> getByBook(Book bookObject);
-
-    void drawAsciiTableComment(Comment commentObject);
-
-    void drawAsciiTableComments(List<Comment> comments);
-
 }

@@ -214,8 +214,12 @@ public class BookDaoJpaTest {
     @DisplayName("return list of Book-rows from database by title-column")
     @Test
     void getByTitleTest() {
-        List<Book> books = bookDao.getByTitle("Ruslan and Lyudmila");
-        Book bookObject = new Book(7L, "Ruslan and Lyudmila", em.find(Author.class, 6L), em.find(Genre.class, 3L));
-        assertTrue(books.contains(bookObject), "Error getting book-row by title");
+        Book bookObect = bookDao.getByTitle("Ruslan and Lyudmila").get(0);
+        assertAll(
+                () -> assertEquals(7L, bookObect.getBookId()),
+                () -> assertEquals("Ruslan and Lyudmila", bookObect.getTitle()),
+                () -> assertEquals("Alexander Pushkin", bookObect.getAuthorObject().getAuthor()),
+                () -> assertEquals("poem", bookObect.getGenreObject().getGenre())
+        );
     }
 }

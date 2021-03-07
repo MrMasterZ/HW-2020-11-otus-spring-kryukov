@@ -5,10 +5,12 @@ import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import otus.student.kryukov.dz.domain.Comment;
 import otus.student.kryukov.dz.exception.NoSuchEntityException;
+import otus.student.kryukov.dz.print.DrawTable;
 import otus.student.kryukov.dz.print.PrintService;
 import otus.student.kryukov.dz.service.BookService;
 import otus.student.kryukov.dz.service.CommentService;
 
+import java.util.Arrays;
 import java.util.List;
 
 @ShellComponent
@@ -16,11 +18,13 @@ public class CommentCommands {
     private final CommentService commentService;
     private final BookService bookService;
     private final PrintService printService;
+    private final DrawTable drawTable;
 
-    public CommentCommands(CommentService commentService, BookService bookService, PrintService printService) {
+    public CommentCommands(CommentService commentService, BookService bookService, PrintService printService, DrawTable drawTable) {
         this.commentService = commentService;
         this.bookService = bookService;
         this.printService = printService;
+        this.drawTable = drawTable;
     }
 
     @ShellMethod(value = "create comment-object in database", key = {"cc", "createComment"})
@@ -33,13 +37,13 @@ public class CommentCommands {
     @ShellMethod(value = "get comment-object by comment_id", key = {"gcid", "getByCommentId"})
     public void getByCommentId(@ShellOption Long commentId) {
         Comment commentObject = commentService.getByCommentId(commentId);
-        commentService.drawAsciiTableComment(commentObject);
+        drawTable.drawAsciiTableComment(Arrays.asList(commentObject), Arrays.asList("comment_id", "comment", "book title"));
     }
 
     @ShellMethod(value = "get all comment-objects", key = {"gac", "getAllComments"})
     public void getAllComments() {
         List<Comment> comments = commentService.getAllComments();
-        commentService.drawAsciiTableComments(comments);
+        drawTable.drawAsciiTableComment(comments, Arrays.asList("comment_id", "comment", "book title"));
     }
 
     @ShellMethod(value = "update comment-object in database", key = {"uc", "updateComment"})
@@ -59,12 +63,7 @@ public class CommentCommands {
     public void getCommentByCommentOrAllParams(@ShellOption String comment, @ShellOption Long bookId) {
         Comment commentObject = commentService.getByCommentOrAllParams(comment, bookId)
                 .orElseThrow(() -> new NoSuchEntityException("no such comment exists"));
-        commentService.drawAsciiTableComment(commentObject);
+        drawTable.drawAsciiTableComment(Arrays.asList(commentObject), Arrays.asList("comment_id", "comment", "book title"));
     }
 
-    @ShellMethod(value = "get comment-object by book-object", key = {"gcb", "getCommentByBook"})
-    public void getCommentByBook(@ShellOption Long bookId) {
-        List<Comment> comments = commentService.getByBook(bookService.getByBookId(bookId));
-        commentService.drawAsciiTableComments(comments);
-    }
 }

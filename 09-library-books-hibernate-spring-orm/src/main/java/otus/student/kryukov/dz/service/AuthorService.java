@@ -12,8 +12,6 @@ public interface AuthorService {
 
     void create(String author);
 
-    void drawAsciiTableAuthor(Author authorObject);
-
     void checkEmptyAuthor(String author);
 
 }

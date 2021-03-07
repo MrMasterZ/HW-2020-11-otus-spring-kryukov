@@ -193,14 +193,4 @@ public class CommentDaoJpaTest {
                 em.find(Book.class, 2L));
         assertTrue(comments.contains(commentObject), "Error getting comment-row by comment");
     }
-
-    @DisplayName("return list of Comment-rows from database by book_id-column")
-    @Test
-    void getByBookTest() {
-        List<Comment> comments = commentDao.getByBook(em.find(Book.class, 2L));
-        Comment commentObject = new Comment(3L,
-                "For admiration, I could not sleep quietly for several days",
-                em.find(Book.class, 2L));
-        assertTrue(comments.contains(commentObject), "Error getting comment-row by book");
-    }
 }

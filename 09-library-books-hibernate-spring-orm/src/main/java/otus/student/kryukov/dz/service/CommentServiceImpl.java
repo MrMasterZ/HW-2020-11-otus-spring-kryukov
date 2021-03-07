@@ -1,9 +1,5 @@
 package otus.student.kryukov.dz.service;
 
-import de.vandermeer.asciitable.AT_Row;
-import de.vandermeer.asciitable.AsciiTable;
-import de.vandermeer.asciitable.CWC_LongestLine;
-import de.vandermeer.skb.interfaces.transformers.textformat.TextAlignment;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,9 +8,7 @@ import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.domain.Comment;
 import otus.student.kryukov.dz.exception.EmptyEntityInsertException;
 import otus.student.kryukov.dz.exception.NoSuchEntityException;
-import otus.student.kryukov.dz.print.PrintService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +17,6 @@ import java.util.Optional;
 public class CommentServiceImpl implements CommentService {
 
     private final CommentDao commentDao;
-    private final PrintService printService;
 
     @Override
     @Transactional
@@ -78,36 +71,6 @@ public class CommentServiceImpl implements CommentService {
             }
         }
         return optionalComment;
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public List<Comment> getByBook(Book bookObject) {
-        return commentDao.getByBook(bookObject);
-    }
-
-    @Override
-    public void drawAsciiTableComment(Comment commentObject) {
-        List<Comment> comments = new ArrayList();
-        comments.add(commentObject);
-        drawAsciiTableComments(comments);
-    }
-
-    @Override
-    public void drawAsciiTableComments(List<Comment> comments) {
-        AsciiTable table = new AsciiTable();
-        table.addRule();
-        AT_Row rowHeader = table.addRow("comment_id", "comment", "book title");
-        rowHeader.setTextAlignment(TextAlignment.CENTER);
-        table.addRule();
-        for (Comment commentObject : comments) {
-            AT_Row rowData = table.addRow(commentObject.getCommentId(), commentObject.getComment(), commentObject.getBookObject().getTitle());
-            rowData.setTextAlignment(TextAlignment.LEFT);
-            rowData.getCells().get(0).getContext().setTextAlignment(TextAlignment.CENTER);
-            table.addRule();
-        }
-        table.getRenderer().setCWC(new CWC_LongestLine());
-        printService.out(table.render());
     }
 
     private void checkEmptyComment(String comment) {

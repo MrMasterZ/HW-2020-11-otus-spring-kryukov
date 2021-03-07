@@ -3,6 +3,7 @@ package otus.student.kryukov.dz.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NamedEntityGraph(name = "authors-entity-graph", attributeNodes = {@NamedAttributeNode("authorObject")})
@@ -25,6 +26,9 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "genre_id")
     private Genre genreObject;
+
+    @OneToMany(targetEntity = Comment.class, fetch = FetchType.EAGER, mappedBy = "bookObject")
+    private List<Comment> comments;
 
     public Book() {
     }

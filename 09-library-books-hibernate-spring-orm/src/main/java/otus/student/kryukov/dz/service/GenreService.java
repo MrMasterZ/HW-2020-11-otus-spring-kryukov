@@ -12,8 +12,6 @@ public interface GenreService {
 
     void create(String genre);
 
-    void drawAsciiTableGenre(Genre genreObject);
-
     void checkEmptyGenre(String genre);
 
 }

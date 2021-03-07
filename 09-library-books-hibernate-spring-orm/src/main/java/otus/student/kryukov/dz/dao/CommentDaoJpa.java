@@ -1,7 +1,6 @@
 package otus.student.kryukov.dz.dao;
 
 import org.springframework.stereotype.Repository;
-import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.domain.Comment;
 
 import javax.persistence.EntityGraph;
@@ -53,14 +52,5 @@ public class CommentDaoJpa implements CommentDao {
         queryByComment.setHint("javax.persistence.fetchgraph", entityGraph);
         queryByComment.setParameter("comment", comment);
         return queryByComment.getResultList();
-    }
-
-    @Override
-    public List<Comment> getByBook(Book bookObject) {
-        EntityGraph<?> entityGraph = em.getEntityGraph("books-entity-graph");
-        TypedQuery<Comment> queryByBook = em.createQuery("select c from Comment c where bookObject = :bookObject", Comment.class);
-        queryByBook.setHint("javax.persistence.fetchgraph", entityGraph);
-        queryByBook.setParameter("bookObject", bookObject);
-        return queryByBook.getResultList();
     }
 }

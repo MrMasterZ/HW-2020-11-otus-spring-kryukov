@@ -30,7 +30,7 @@ public class AuthorServiceImplTest {
 
     @BeforeEach
     private void init() {
-        authorService = new AuthorServiceImpl(authorDao, printService);
+        authorService = new AuthorServiceImpl(authorDao);
     }
 
     @DisplayName("return Author-row from database by author-column")

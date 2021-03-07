@@ -19,10 +19,4 @@ public interface BookService {
 
     Optional<Book> getByAllParams(String title, String author, String genre);
 
-    void drawAsciiTableBooks(List<Book> books);
-
-    void drawAsciiTableBook(Book bookObject);
-
-    void drawCommentsForBook(Book bookObject);
-
 }

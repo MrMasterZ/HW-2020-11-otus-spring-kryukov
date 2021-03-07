@@ -1,6 +1,5 @@
 package otus.student.kryukov.dz.dao;
 
-import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.domain.Comment;
 
 import java.util.List;
@@ -20,5 +19,4 @@ public interface CommentDao {
 
     List<Comment> getByComment(String comment);
 
-    List<Comment> getByBook(Book bookObject);
 }

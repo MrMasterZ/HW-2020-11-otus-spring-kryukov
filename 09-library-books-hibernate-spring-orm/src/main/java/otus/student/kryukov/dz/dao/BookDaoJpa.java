@@ -49,5 +49,4 @@ public class BookDaoJpa implements BookDao {
         queryByTitle.setParameter("title", title);
         return queryByTitle.getResultList();
     }
-
 }
