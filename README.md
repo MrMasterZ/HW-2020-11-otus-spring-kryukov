@@ -1,16 +1,30 @@
-## Крюков Сергей Александрович. Курс otus: "Разработчик на Spring Framework". Период обучения группы: 24.11.20 — 29.05.21 гг.
+## Spring Framework Developer
 
-### Домашнее задание №1 по теме "Введение в Spring Framework"
-* 01-spring-in-xml-context
+Course: [Otus Spring Framework Developer Course](https://otus.ru/lessons/javaspring/)
 
-### Домашнее задание №2 по теме "Конфигурирование Spring-приложений"
-* 02-test-students-annotation
+Training period: 24.11.20 — 29.05.21
 
-### Домашнее задание №3 по теме "Чёрная магия Spring Boot"
-* 03-test-students-spring-boot
+Student: Kryukov Sergey Alexandrovich
 
-### Домашнее задание №4 по теме "Продвинутая конфигурация Spring-приложений"
-* 05-test-students-spring-shell
+Certificate:
 
-### Домашнее задание №5 по теме "DAO на Spring JDBC"
-* 07-library-books-spring-jdbc-shell
+### Homework №1 (theme: "Introduction to Spring Framework")
+* [01-spring-in-xml-context](01-spring-in-xml-context)
+
+### Homework №2 (theme: "Configuring Spring Applications")
+* [02-test-students-annotation](02-test-students-annotation)
+
+
+### Homework №3 (theme: "Black magic of Spring Boot")
+* [03-test-students-spring-boot](03-test-students-spring-boot)
+
+
+### Homework №4 (theme: "Advanced Spring Application Configuration")
+* [05-test-students-spring-shell](05-test-students-spring-shell)
+
+### Homework №5 (theme: "DAO on Spring JDBC")
+* [07-library-books-spring-jdbc-shell](07-library-books-spring-jdbc-shell)
+
+
+### Homework №6 (theme: "JPQL, Spring ORM, JPA")
+* [09-library-books-hibernate-spring-orm](09-library-books-hibernate-spring-orm)

@@ -1,11 +1,27 @@
-## Домашнее задание №3 (тема: "Чёрная магия" Spring Boot) Крюкова Сергея Александровича по курсу otus "Разработчик на Spring Framework"
+## Homework №3 (theme: "Black magic of Spring Boot") Kryukov Sergey Alexandrovich on the course otus "Developer on Spring Framework"
 
-### Условие задания (описание функционала)
-* Перенести приложение для тестирования студентов на Spring Boot
+### Task
+* Create an application for student testing on Spring Boot
+It is a continuation of 02-test-students-annotation
+(application gets user name and surname, then asks questions with answer options, gets answer numbers and calculates user's rating)
 
-### Требования к заданию
-* 1) Создать проект, используя Spring Boot Initializr (https://start.spring.io)
-* 2) Перенести все свойства в application.yml
-* 3) Локализовать выводимые сообщения и вопросы (в CSV-файле). MesageSource должен быть из автоконфигурации Spring Boot.
-* 4) Сделать собственный баннер для приложения.
-* 5) Перенести тесты и использовать spring-boot-starter-test для тестирования
+### Job Requirements
+* Create project, using Spring Boot Initializr (https://start.spring.io)
+* take properties into application.yml
+* localize output messages and questions ( CSV-file)
+* create banner for application
+* Cover with unit-tests, using spring-boot-starter-test
+
+### Used technologies
+* Spring boot
+* Java-based configuration
+* Annotation-based configuration
+* ConfigurationProperties annotation
+* Lombok
+* reflection
+* YML application configuration
+* Java Internationalization (bundle)
+* JUnit 5
+* maven (maven-shade-plugin, maven-enforcer-plugin, etc)
+* opencsv
+* spring-boot-starter-test

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>otus.student.kryukov.dz</groupId>
+    <artifactId>spring</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+	    <module>01-spring-in-xml-context</module>
+	    <module>02-test-students-annotation</module>
+	    <module>03-test-students-spring-boot</module>
+	    <module>05-test-students-spring-shell</module>
+	    <module>07-library-books-spring-jdbc-shell</module>
+	    <module>09-library-books-hibernate-spring-orm</module>
+    </modules>
+</project>
