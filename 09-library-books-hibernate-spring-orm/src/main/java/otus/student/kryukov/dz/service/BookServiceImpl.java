@@ -37,6 +37,7 @@ public class BookServiceImpl implements BookService {
     public Book getByBookId(Long bookId) {
         Book bookObject = bookDao.getByBookId(bookId)
                 .orElseThrow(() -> new NoSuchEntityException("no such book exists"));
+        bookObject.getComments().size(); // get List<Comment> and avoid FetchType.EAGER in domain
         return bookObject;
     }
 

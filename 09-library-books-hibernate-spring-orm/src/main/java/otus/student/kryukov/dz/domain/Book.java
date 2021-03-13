@@ -27,7 +27,7 @@ public class Book {
     @JoinColumn(name = "genre_id")
     private Genre genreObject;
 
-    @OneToMany(targetEntity = Comment.class, fetch = FetchType.EAGER, mappedBy = "bookObject")
+    @OneToMany(targetEntity = Comment.class, fetch = FetchType.LAZY, mappedBy = "bookObject")
     private List<Comment> comments;
 
     public Book() {
