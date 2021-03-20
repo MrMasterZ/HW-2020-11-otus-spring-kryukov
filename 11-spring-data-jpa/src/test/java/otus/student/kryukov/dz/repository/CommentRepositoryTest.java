@@ -30,7 +30,7 @@ public class CommentRepositoryTest {
     @DisplayName("return all Comment-rows from database")
     @Test
     void getAllCommentsTest() {
-        List<Comment> comments = commentRepository.findAllFetch();
+        List<Comment> comments = commentRepository.findAll();
         assertThat(comments).hasSize(20);
         assertAll(
                 () -> assertEquals(1L, comments.get(0).getCommentId()),

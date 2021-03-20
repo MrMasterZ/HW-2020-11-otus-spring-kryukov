@@ -44,7 +44,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional(readOnly = true)
     public List<Book> getAllBooks() {
-        return bookRepository.findAllFetch();
+        return bookRepository.findAll();
     }
 
     @Override

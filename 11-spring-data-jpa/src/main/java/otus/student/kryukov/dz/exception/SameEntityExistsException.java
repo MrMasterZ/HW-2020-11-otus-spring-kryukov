@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class SameEntityExistsException extends RuntimeException {
+public class SameEntityExistsException extends LibraryEntityException {
     private final String message;
 }

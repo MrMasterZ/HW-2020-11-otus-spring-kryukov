@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class NoSuchEntityException extends RuntimeException {
+public class NoSuchEntityException extends LibraryEntityException {
     private final String message;
 }

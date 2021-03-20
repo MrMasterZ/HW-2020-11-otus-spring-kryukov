@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class EmptyEntityInsertException extends RuntimeException {
+public class EmptyEntityInsertException extends LibraryEntityException {
     private final String message;
 }

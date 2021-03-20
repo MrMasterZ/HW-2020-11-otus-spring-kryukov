@@ -28,7 +28,7 @@ public class BookRepositoryTest {
     @DisplayName("return all Book-rows from database")
     @Test
     void getAllBooksTest() {
-        List<Book> books = bookRepository.findAllFetch();
+        List<Book> books = bookRepository.findAll();
         assertThat(books).hasSize(15);
         assertAll(
                 () -> assertEquals(1L, books.get(0).getBookId()),

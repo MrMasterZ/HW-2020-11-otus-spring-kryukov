@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
+@NamedEntityGraph(name = "authors-genres-entity-graph", attributeNodes = {@NamedAttributeNode("authorObject"), @NamedAttributeNode("genreObject")})
 @Entity
 @Table(name = "books")
 public class Book {
@@ -29,7 +30,7 @@ public class Book {
     private Genre genreObject;
 
     @Fetch(FetchMode.SUBSELECT)
-    @OneToMany(targetEntity = Comment.class, fetch = FetchType.LAZY, mappedBy = "bookObject")
+    @OneToMany(mappedBy = "bookObject")
     private List<Comment> comments;
 
     public Book() {
