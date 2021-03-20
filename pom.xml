@@ -16,5 +16,6 @@
 	    <module>05-test-students-spring-shell</module>
 	    <module>07-library-books-spring-jdbc-shell</module>
 	    <module>09-library-books-hibernate-spring-orm</module>
+        <module>11-spring-data-jpa</module>
     </modules>
 </project>
