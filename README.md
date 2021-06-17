@@ -28,3 +28,6 @@ Certificate:
 
 ### Homework №7 (theme: "White Magic Spring Data: Spring Data JPA")
 * [11-pring-data-jpa](11-spring-data-jpa)
+
+### Homework №8 (theme: "Spring Data to connect to noSQL (mongoDB)")
+* [13-spring-data-mongodb](13-spring-data-mongodb)
