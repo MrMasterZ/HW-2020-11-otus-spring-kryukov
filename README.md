@@ -31,3 +31,6 @@ Certificate:
 
 ### Homework №8 (theme: "Spring Data to connect to noSQL (mongoDB)")
 * [13-spring-data-mongodb](13-spring-data-mongodb)
+
+### Homework №9 (theme: "Spring MVC View (thymeleaf)")
+* [16-spring-mvc-thymeleaf](16-spring-mvc-thymeleaf)
