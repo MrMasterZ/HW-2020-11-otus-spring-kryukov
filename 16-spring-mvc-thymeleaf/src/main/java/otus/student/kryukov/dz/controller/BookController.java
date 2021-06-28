@@ -4,11 +4,15 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import otus.student.kryukov.dz.converter.BookConverter;
 import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.domain.dto.BookDto;
+import otus.student.kryukov.dz.service.AuthorService;
 import otus.student.kryukov.dz.service.BookService;
+import otus.student.kryukov.dz.service.GenreService;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
@@ -16,12 +20,15 @@ import java.util.stream.Collectors;
 public class BookController {
 
     private final BookService bookService;
+    private final AuthorService authorService;
+    private final GenreService genreService;
+    private final BookConverter bookConverter;
 
     @GetMapping("/book/list")
     public String bookList(Model model) {
         List<Book> books = bookService.getAllBooks();
         List<BookDto> bookDtos = books.stream()
-                .map(this::convertToBookDto).collect(Collectors.toList());
+                .map(bookConverter::convertToBookDto).collect(Collectors.toList());
         model.addAttribute("books", bookDtos);
         return "book/list";
     }
@@ -33,10 +40,11 @@ public class BookController {
 
     @GetMapping("/book/{id}/edit")
     public String bookEditPage(@PathVariable String id, Model model) {
+        fillAuthorsGenres(model);
         Book bookObject = bookService.getByBookId(id);
-        BookDto bookDto = convertToBookDto(bookObject);
+        BookDto bookDto = bookConverter.convertToBookDto(bookObject);
         model.addAttribute("book", bookDto);
-        return "/book/edit";
+        return "book/create";
     }
 
     @PostMapping("/book/{id}/edit")
@@ -52,7 +60,9 @@ public class BookController {
     }
 
     @GetMapping("/book/create")
-    public String bookCreatePage() {
+    public String bookCreatePage(Model model) {
+        fillAuthorsGenres(model);
+        model.addAttribute("book", "");
         return "book/create";
     }
 
@@ -62,18 +72,13 @@ public class BookController {
         return "redirect:/book/list";
     }
 
-    private BookDto convertToBookDto(Book book) {
-        return new BookDto(
-                book.getBookId(),
-                book.getTitle(),
-                book.getAuthorObject().getAuthor(),
-                book.getGenreObject().getGenre()
-        );
-    }
-
-    @ExceptionHandler(value= RuntimeException.class)
-    public String emptyEntityError(Model model, RuntimeException ex) {
-        model.addAttribute("errMessage", "ERROR: " + ex.getMessage());
-        return "book/error";
+    private Model fillAuthorsGenres(Model model) {
+        Set<String> authors = authorService.getAllAuthors().stream()
+                .map((s) -> s.getAuthor()).collect(Collectors.toSet());
+        Set<String> genres = genreService.getAllGenres().stream()
+                .map((s) -> s.getGenre()).collect(Collectors.toSet());
+        model.addAttribute("authors", authors);
+        model.addAttribute("genres", genres);
+        return model;
     }
 }

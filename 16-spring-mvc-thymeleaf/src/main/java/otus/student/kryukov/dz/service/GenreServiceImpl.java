@@ -7,6 +7,7 @@ import otus.student.kryukov.dz.domain.Genre;
 import otus.student.kryukov.dz.exception.EmptyEntityInsertException;
 import otus.student.kryukov.dz.repository.GenreRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,6 +26,12 @@ public class GenreServiceImpl implements GenreService {
     @Transactional(readOnly = true)
     public Optional<Genre> getByGenreId(String genreId) {
         return genreRepository.findById(genreId);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Genre> getAllGenres() {
+        return genreRepository.findAll();
     }
 
     @Override

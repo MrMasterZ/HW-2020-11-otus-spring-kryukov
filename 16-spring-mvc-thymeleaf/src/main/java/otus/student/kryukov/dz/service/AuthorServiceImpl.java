@@ -7,6 +7,7 @@ import otus.student.kryukov.dz.domain.Author;
 import otus.student.kryukov.dz.exception.EmptyEntityInsertException;
 import otus.student.kryukov.dz.repository.AuthorRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,6 +26,12 @@ public class AuthorServiceImpl implements AuthorService {
     @Transactional(readOnly = true)
     public Optional<Author> getByAuthorId(String authorId) {
         return authorRepository.findById(authorId);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Author> getAllAuthors() {
+        return authorRepository.findAll();
     }
 
     @Override
