@@ -1,8 +1,7 @@
-package otus.student.kryukov.dz.mongock.changelog;
+package otus.student.kryukov.dz.mongock.changelog.test;
 
 import com.github.cloudyrock.mongock.ChangeLog;
 import com.github.cloudyrock.mongock.ChangeSet;
-import com.mongodb.client.MongoDatabase;
 import otus.student.kryukov.dz.domain.Author;
 import otus.student.kryukov.dz.domain.Book;
 import otus.student.kryukov.dz.domain.Genre;

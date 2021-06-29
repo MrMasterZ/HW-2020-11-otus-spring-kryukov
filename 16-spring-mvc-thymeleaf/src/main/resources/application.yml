@@ -1,0 +1,4 @@
+mongock:
+  runner-type: "InitializingBean" #Without InitializingBean, mongock is not executed in Spring Shell   "ApplicationRunner" (default)
+  change-logs-scan-package:
+    - otus.student.kryukov.dz.mongock.changelog
