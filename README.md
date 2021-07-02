@@ -34,3 +34,6 @@ Certificate:
 
 ### Homework №9 (theme: "Spring MVC View (thymeleaf)")
 * [16-spring-mvc-thymeleaf](16-spring-mvc-thymeleaf)
+
+### Homework №10 (theme: "Modern applications using Spring MVC (AJAX)")
+* [17-spring-mvc-ajax](17-spring-mvc-ajax)
