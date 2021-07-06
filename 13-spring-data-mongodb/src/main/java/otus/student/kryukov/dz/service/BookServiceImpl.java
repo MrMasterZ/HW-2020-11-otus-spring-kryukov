@@ -81,6 +81,7 @@ public class BookServiceImpl implements BookService {
         return optionalBook;
     }
 
+    @Override
     public Boolean existsByAuthorId(String authorId){
         Author authorObject = authorService.getByAuthorId(authorId)
                 .orElseThrow(() -> new NoSuchEntityException("no such author exists"));
