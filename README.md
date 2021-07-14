@@ -37,3 +37,6 @@ Certificate:
 
 ### Homework №10 (theme: "Modern applications using Spring MVC (AJAX)")
 * [17-spring-mvc-ajax](17-spring-mvc-ajax)
+
+### Homework №11 (theme: "Spring WebFlux")
+* [20-spring-webflux](20-spring-webflux)

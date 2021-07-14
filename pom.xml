@@ -20,5 +20,6 @@
         <module>13-spring-data-mongodb</module>
 	<module>16-spring-mvc-thymeleaf</module>
 	<module>17-spring-mvc-ajax</module>
+    <module>20-spring-webflux</module>
     </modules>
 </project>
