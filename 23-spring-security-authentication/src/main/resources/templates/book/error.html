@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Books</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <p class = "error" th:text="${errMessage}">ERROR</p>
+
+    <button class = "cancel-button"><a th:href="@{/book/list}" href="list.html">go to main page</a></button>
+</body>
+</html>

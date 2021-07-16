@@ -40,3 +40,6 @@ Certificate:
 
 ### Homework №11 (theme: "Spring WebFlux")
 * [20-spring-webflux](20-spring-webflux)
+
+### Homework №12 (theme: "Spring Security: authentication mechanisms")
+* [23-spring-security-authentication](23-spring-security-authentication)
