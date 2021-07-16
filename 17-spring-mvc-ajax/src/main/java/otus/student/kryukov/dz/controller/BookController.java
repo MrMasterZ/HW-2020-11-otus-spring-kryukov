@@ -27,9 +27,9 @@ public class BookController {
     }
 
     @PatchMapping("/book/{id}")
-    public BookDto bookEdit(@RequestBody BookDto bookDto) {
-        bookService.update(bookDto.getId(), bookDto.getTitle(), bookDto.getAuthor(), bookDto.getGenre());
-        Book bookObject = bookService.getByBookId(bookDto.getId());
+    public BookDto bookEdit(@PathVariable String id, @RequestBody BookDto bookDto) {
+        bookService.update(id, bookDto.getTitle(), bookDto.getAuthor(), bookDto.getGenre());
+        Book bookObject = bookService.getByBookId(id);
         BookDto newBookDto = bookConverter.convertToBookDto(bookObject);
         return newBookDto;
     }
@@ -45,7 +45,7 @@ public class BookController {
         bookService.create(bookDto.getTitle(), bookDto.getAuthor(), bookDto.getGenre());
         Optional<Book> bookOptional = bookService.getByAllParams(bookDto.getTitle(), bookDto.getAuthor(), bookDto.getGenre());
         Book bookObject = null;
-        if (!bookOptional.isEmpty())  // todo иначе обработка ошибок
+        if (!bookOptional.isEmpty())
             bookObject = bookOptional.get();
         BookDto newBookDto = bookConverter.convertToBookDto(bookObject);
         return newBookDto;

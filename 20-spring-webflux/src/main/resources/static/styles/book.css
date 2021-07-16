@@ -1,0 +1,57 @@
+table {
+    margin-left: 25px;
+}
+
+th, td {
+    border: 1px solid grey;
+    font-size: 25px;
+}
+
+td:hover {
+    background-color: darkgray;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+input {
+    font-size: 25px;
+}
+
+#edit-button {
+    background-color: darkgreen;
+}
+
+#del-button {
+    background-color: red;
+}
+
+#create-button {
+    background-color: cornflowerblue;
+}
+
+.title {
+    color: #ff0000;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.title-input {
+    margin-left: 32px;
+}
+
+.author-input {
+    margin-left: 10px;
+}
+
+.genre-input {
+    margin-left: 19px;
+}
+
+#error {
+    color: red;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
