@@ -28,7 +28,7 @@ public class BookController {
     private final AuthorRepository authorRepository;
     private final GenreRepository genreRepository;
 
-    @Transactional
+    @Transactional(readOnly = true)
     @GetMapping("/book")
     public Flux<BookDto> bookList() {
         bookRepository.findAll().subscribe(System.out::println);
