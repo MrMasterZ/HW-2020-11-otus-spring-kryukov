@@ -43,3 +43,6 @@ Certificate:
 
 ### Homework №12 (theme: "Spring Security: authentication mechanisms")
 * [23-spring-security-authentication](23-spring-security-authentication)
+
+### Homework №13 (theme: "Spring Security: authorization (based on URL, methods and ACL)")
+* [25-spring-security-authorization](25-spring-security-authorization)

@@ -21,6 +21,7 @@
 	<module>16-spring-mvc-thymeleaf</module>
 	<module>17-spring-mvc-ajax</module>
 	<module>20-spring-webflux</module>
-        <module>23-spring-security-authentication</module>
+	<module>23-spring-security-authentication</module>
+        <module>25-spring-security-authorization</module>
     </modules>
 </project>
