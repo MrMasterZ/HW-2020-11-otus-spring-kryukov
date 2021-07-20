@@ -11,7 +11,7 @@
 * 2) Restrict controller methods using prePost and secured annotations: 
      + only admin can delete and create books
 * 3) Restrict controller methods using URL restrictions:
-     + Deny all users except admin from editing the workbook
+     + Deny all users except admin editing book
 
 
 ### Used technologies
