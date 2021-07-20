@@ -10,7 +10,7 @@ It is a continuation of 23-spring-security-authentication (Spring Data Mongo rep
      1.2) Sergey sees all the books except "Martian path"
 * 2) Restrict controller methods using prePost and secured annotations: 
      only admin can delete and create books
-* 3) Ограничить методы контроллера с помощью ограничений URL-адресов:
+* 3) Restrict controller methods using URL restrictions:
      Deny all users except admin from editing the workbook
 
 
