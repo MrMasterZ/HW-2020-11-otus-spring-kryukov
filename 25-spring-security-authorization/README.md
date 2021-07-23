@@ -8,10 +8,8 @@
 * 1) Using acl, restrict the ability to view books when a user enters the main page:
      + 1.1) all users see all books
      + 1.2) Sergey sees all the books except "Martian path"
-* 2) Restrict controller methods using prePost and secured annotations: 
-     + only admin can delete and create books
-* 3) Restrict controller methods using URL restrictions:
-     + Deny all users except admin editing book
+* 2) Restrict controller methods using URL restrictions:
+     + Deny all users except admin editing, deleting and creating books
 
 
 ### Used technologies

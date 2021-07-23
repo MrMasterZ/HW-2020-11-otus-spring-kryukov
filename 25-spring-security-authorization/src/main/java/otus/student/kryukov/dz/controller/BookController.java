@@ -57,14 +57,14 @@ public class BookController {
         return "redirect:/book/list";
     }
 
-    @Secured("ROLE_ADMIN")                           // method restrictions by roles
+    //@Secured("ROLE_ADMIN")                           // (saved for history) method restrictions by roles
     @GetMapping("/book/{id}/del")
     public String bookDel(@PathVariable Long id) {
         bookService.delete(id);
         return "redirect:/book/list";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")                // Controller methods are best not restriction thus way, it is better to use url restrictions, otherwise we waste resources on processing a chain of filters
+    //@PreAuthorize("hasRole('ADMIN')")                // (saved for history) Controller methods are best not restriction thus way, it is better to use url restrictions, otherwise we waste resources on processing a chain of filters
     @GetMapping("/book/create")
     public String bookCreatePage(Model model) {
         fillAuthorsGenres(model);
@@ -72,7 +72,7 @@ public class BookController {
         return "book/create";
     }
 
-    @PreAuthorize("authentication.name == 'admin'")   // @PreAuthorize more flexible than @Secured because it allows you to use SPEL and other features
+    //@PreAuthorize("authentication.name == 'admin'")   // (saved for history) @PreAuthorize more flexible than @Secured because it allows you to use SPEL and other features
     @PostMapping("/book/create")
     public String bookCreate(BookDto bookDto) {
         bookService.create(bookDto.getTitle(), bookDto.getAuthor(), bookDto.getGenre());
