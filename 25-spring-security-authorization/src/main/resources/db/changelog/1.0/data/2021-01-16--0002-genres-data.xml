@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet  author="mrmasterz"  id="2021-01-16--0002-genres-data">
+        <insert tableName="genres">
+            <column  name="genre"  value="fantasy"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="detective story"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="poem"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="fairy tale"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="prose"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="drama"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="journalism"/>
+        </insert>
+        <insert tableName="genres">
+            <column  name="genre"  value="history"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
