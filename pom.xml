@@ -22,6 +22,7 @@
 	<module>17-spring-mvc-ajax</module>
 	<module>20-spring-webflux</module>
 	<module>23-spring-security-authentication</module>
-        <module>25-spring-security-authorization</module>
+	<module>25-spring-security-authorization</module>
+        <module>26-spring-batch-from-mongo-to-rdb</module>
     </modules>
 </project>

@@ -46,3 +46,6 @@ Certificate:
 
 ### Homework №13 (theme: "Spring Security: authorization (based on URL, methods and ACL)")
 * [25-spring-security-authorization](25-spring-security-authorization)
+
+### Homework №14 (theme: "Spring Batch")
+* [26-spring-batch-from-mongo-to-rdb](26-spring-batch-from-mongo-to-rdb)
