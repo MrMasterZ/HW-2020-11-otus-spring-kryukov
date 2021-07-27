@@ -49,3 +49,6 @@ Certificate:
 
 ### Homework №14 (theme: "Spring Batch")
 * [26-spring-batch-from-mongo-to-rdb](26-spring-batch-from-mongo-to-rdb)
+
+### Homework №15 (theme: "Spring Integration")
+* [29-spring-integration](29-spring-integration)
