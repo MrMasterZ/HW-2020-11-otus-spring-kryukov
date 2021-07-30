@@ -52,3 +52,6 @@ Certificate:
 
 ### Homework №15 (theme: "Spring Integration")
 * [29-spring-integration](29-spring-integration)
+
+### Homework №16 (theme: "Spring Boot Actuator")
+* [30-spring-boot-actuator](30-spring-boot-actuator)

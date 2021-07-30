@@ -24,6 +24,7 @@
 	<module>23-spring-security-authentication</module>
 	<module>25-spring-security-authorization</module>
 	<module>26-spring-batch-from-mongo-to-rdb</module>
-        <module>29-spring-integration</module>
+	<module>29-spring-integration</module>
+        <module>30-spring-boot-actuator</module>
     </modules>
 </project>
