@@ -3,7 +3,6 @@
 ### Task
 * It is a continuation of 25-spring-security-authorization
 * Add spring-boot-starter-actuator, settings in application.yml
-* Add logback-spring.xml (logs to console and into file 30-spring-boot-actuator/logs/spring-boot-logger.log)
 * Add CustomHealthIndicator
 
 
