@@ -34,7 +34,7 @@
 * docker build -t 32-docker-library-app:v1 ./library-app
 
 ### Command to create (based on docker-image) and start docker-containers (library-app and postgres)
-docker-compose up
+* docker-compose up
 
 ### Combining two previous commands (build library-app docker-image, create and start docker-containers (library-app and postgres))
-docker-compose --file docker-compose-build.yml up
+* docker-compose --file docker-compose-build.yml up
