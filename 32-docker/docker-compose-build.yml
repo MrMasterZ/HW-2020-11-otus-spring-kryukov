@@ -1,0 +1,32 @@
+version: "3"
+services:
+  postgresdb:
+    container_name: postgres
+    image: library/postgres:13.2
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: library
+    networks: 
+      - library-app
+
+  library-app:
+    build:
+      context: ./library-app
+    container_name: library-app
+    image: 32-docker-library-app:v1
+    depends_on:
+      - postgresdb
+    ports:
+      - 8080:8080
+    volumes:
+      - ./logs:/opt/project/logs:rw
+    networks:
+      - library-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/library
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+
+networks:
+  library-app:
