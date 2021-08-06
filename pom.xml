@@ -16,17 +16,17 @@
 	    <module>05-test-students-spring-shell</module>
 	    <module>07-library-books-spring-jdbc-shell</module>
 	    <module>09-library-books-hibernate-spring-orm</module>
-        <module>11-spring-data-jpa</module>
-        <module>13-spring-data-mongodb</module>
+            <module>11-spring-data-jpa</module>
+            <module>13-spring-data-mongodb</module>
 	    <module>16-spring-mvc-thymeleaf</module>
 	    <module>17-spring-mvc-ajax</module>
-		<module>20-spring-webflux</module>
+	    <module>20-spring-webflux</module>
 	    <module>23-spring-security-authentication</module>
 	    <module>25-spring-security-authorization</module>
 	    <module>26-spring-batch-from-mongo-to-rdb</module>
 	    <module>29-spring-integration</module>
 	    <module>30-spring-boot-actuator</module>
-		<module>32-docker/library-app</module>
-        <module>35-spring-netflix-hystrix/library-app</module>
+	    <module>32-docker/library-app</module>
+            <module>35-spring-netflix-hystrix/library-app</module>
     </modules>
 </project>
