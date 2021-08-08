@@ -58,3 +58,6 @@ Certificate:
 
 ### Homework №17 (theme: "Docker")
 * [32-docker](32-docker)
+
+### Homework №18 (theme: "Hystrix")
+* [35-spring-netflix-hystrix](35-spring-netflix-hystrix)
