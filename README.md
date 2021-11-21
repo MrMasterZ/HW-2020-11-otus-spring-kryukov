@@ -2,11 +2,11 @@
 
 Course: [Otus Spring Framework Developer Course](https://otus.ru/lessons/javaspring/)
 
-Training period: 24.11.20 — 29.05.21
+Training period: 24.02.21 — 28.08.21
 
 Student: Kryukov Sergey Alexandrovich
 
-Certificate:
+Certificate: https://otus.ru/certificate/f9daf73761af4a0bae4816bdc2368198/
 
 ### Homework №1 (theme: "Introduction to Spring Framework")
 * [01-spring-in-xml-context](01-spring-in-xml-context)
